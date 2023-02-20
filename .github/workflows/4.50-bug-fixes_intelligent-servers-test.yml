@@ -14,7 +14,7 @@ jobs:
     runs-on: windows-latest
     defaults:
       run:
-        working-directory: /src/Presentation/Nop.Web
+        working-directory: \src\Presentation\Nop.Web
 
     steps:
       - uses: actions/checkout@v2
@@ -42,7 +42,7 @@ jobs:
     needs: build
     defaults:
       run:
-        working-directory: /src/Presentation/Nop.Web
+        working-directory: \src\Presentation\Nop.Web
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
